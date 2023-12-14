@@ -29,3 +29,13 @@ void agregarMateria(struct Estudiante* estudiante, const char* nombreMateria, fl
     estudiante->materias[estudiante->numMaterias].calificacion = calificacion;
     estudiante->numMaterias++;
 }
+void eliminarMateria(struct Estudiante* estudiante, const char* nombreMateria) {
+    for (int i = 0; i < estudiante->numMaterias; ++i) {
+        if (strcmp(estudiante->materias[i].nombreMateria, nombreMateria) == 0) {
+            memmove(&estudiante->materias[i], &estudiante->materias[i + 1], (estudiante->numMaterias - i - 1) * sizeof(struct Materia));
+            estudiante->numMaterias--;
+            estudiante->materias = (struct Materia*)realloc(estudiante->materias, estudiante->numMaterias * sizeof(struct Materia));
+            break;
+        }
+    }
+}
