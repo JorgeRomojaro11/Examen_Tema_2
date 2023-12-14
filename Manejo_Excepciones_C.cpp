@@ -7,3 +7,8 @@ struct Asistencia {
     char materia[50];
     char estado[20];
 };
+enum ErrorCode {
+    OK,
+    FECHA_INVALIDA,
+    MATERIA_NO_REGISTRADA
+};
