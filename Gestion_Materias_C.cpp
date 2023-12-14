@@ -39,3 +39,17 @@ void eliminarMateria(struct Estudiante* estudiante, const char* nombreMateria) {
         }
     }
 }
+int main() {
+    struct Estudiante estudiante1 = {"Juan", 20, 85.5, NULL, 0};
+    agregarMateria(&estudiante1, "Matemáticas", 90.0);
+    agregarMateria(&estudiante1, "Historia", 75.5);
+    mostrarEstudiante(&estudiante1);
+
+    eliminarMateria(&estudiante1, "Historia");
+    printf("\nDespués de eliminar Historia:\n");
+    mostrarEstudiante(&estudiante1);
+
+    free(estudiante1.materias);
+
+    return 0;
+}
