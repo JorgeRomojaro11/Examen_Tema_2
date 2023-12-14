@@ -24,3 +24,18 @@ void mostrarEstudiante(const Estudiante& estudiante) {
         std::cout << " - " << materia.nombreMateria << ", Calificación: " << materia.calificacion << std::endl;
     }
 }
+void agregarMateria(Estudiante& estudiante, const std::string& nombreMateria, float calificacion) {
+    Materia nuevaMateria = {nombreMateria, calificacion};
+    estudiante.materias.push_back(nuevaMateria);
+}
+
+void eliminarMateria(Estudiante& estudiante, const std::string& nombreMateria) {
+    estudiante.materias.erase(
+            std::remove_if(
+                    estudiante.materias.begin(),
+                    estudiante.materias.end(),
+                    [&nombreMateria](const Materia& materia) {
+                        return materia.nombreMateria == nombreMateria;
+                    }),
+            estudiante.materias.end());
+}
