@@ -7,3 +7,9 @@ struct Asistencia {
     std::string materia;
     std::string estado;
 };
+struct Estudiante {
+    std::string nombre;
+    int edad;
+    float promedio;
+    std::vector<Asistencia> asistencias;
+};
