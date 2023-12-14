@@ -39,3 +39,15 @@ void eliminarMateria(Estudiante& estudiante, const std::string& nombreMateria) {
                     }),
             estudiante.materias.end());
 }
+int main() {
+    Estudiante estudiante1 = {"Xokas", 35, 34.7};
+    agregarMateria(estudiante1, "Matemáticas", 70.0);
+    agregarMateria(estudiante1, "Historia", 0.6);
+    mostrarEstudiante(estudiante1);
+
+    eliminarMateria(estudiante1, "Historia");
+    std::cout << "\nDespués de eliminar Historia:\n";
+    mostrarEstudiante(estudiante1);
+
+    return 0;
+}
