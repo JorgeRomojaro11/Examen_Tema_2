@@ -26,3 +26,13 @@ public:
         }
     }
 };
+int main() {
+    Estudiante estudiante1 = {"Rustero", 33, 50.0};
+    GestionAsistencia::registrarAsistencia(estudiante1, "2023-01-01", "Matemáticas", "asistió");
+    GestionAsistencia::registrarAsistencia(estudiante1, "2023-01-02", "Historia", "falta");
+    GestionAsistencia::registrarAsistencia(estudiante1, "2023-01-03", "Inglés", "tardanza");
+
+    GestionAsistencia::mostrarAsistencia(estudiante1);
+
+    return 0;
+}
