@@ -6,3 +6,9 @@ struct Asistencia {
     char materia[50];
     char estado[20];
 };
+enum Error {
+    SIN_ERROR,
+    FECHA_INVALIDA,
+    MATERIA_NO_REGISTRADA
+};
+
