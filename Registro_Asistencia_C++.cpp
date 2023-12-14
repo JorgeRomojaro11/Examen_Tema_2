@@ -1,3 +1,9 @@
-//
-// Created by Jorge Romojaro on 14/12/2023.
-//
+#include <iostream>
+#include <string>
+#include <vector>
+
+struct Asistencia {
+    std::string fecha;
+    std::string materia;
+    std::string estado;
+};
