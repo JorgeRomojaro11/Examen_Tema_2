@@ -13,3 +13,16 @@ struct Estudiante {
     float promedio;
     std::vector<Asistencia> asistencias;
 };
+class GestionAsistencia {
+public:
+    static void registrarAsistencia(Estudiante& estudiante, const std::string& fecha, const std::string& materia, const std::string& estado) {
+        Asistencia nuevaAsistencia = {fecha, materia, estado};
+        estudiante.asistencias.push_back(nuevaAsistencia);
+    }
+    static void mostrarAsistencia(const Estudiante& estudiante) {
+        std::cout << "Asistencia de " << estudiante.nombre << ":\n";
+        for (const Asistencia& asistencia : estudiante.asistencias) {
+            std::cout << "Fecha: " << asistencia.fecha << ", Materia: " << asistencia.materia << ", Estado: " << asistencia.estado << "\n";
+        }
+    }
+};
