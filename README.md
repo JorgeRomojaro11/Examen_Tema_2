@@ -43,6 +43,10 @@ d) Una característica específica de C.
 Respuesta: b
 
 
+
+
+
+
 Estructura del Estudiante
 
 Comparativa:
@@ -64,6 +68,19 @@ Parámetros de Funciones:
 C++: La función toma una referencia constante (const Estudiante&).
 C: La función toma un puntero a la estructura (const struct Estudiante*).
 Ambas implementaciones cumplen el mismo propósito, pero las diferencias se centran en las características y convenciones propias de cada lenguaje. C++ tiende a ser más flexible, mientras que C es más explícito y sigue convenciones tradicionales. La elección depende de los requisitos y preferencias del desarrollador.
+
+
+
+
+
+Manejo de Excepciones:
+
+Aunque C no tiene un sistema integrado de manejo de excepciones como C++, discute cómo podrías manejar errores y situaciones inesperadas en este lenguaje:
+
+En C, donde no hay un sistema integrado de manejo de excepciones como en C++, los errores y situaciones inesperadas se manejan principalmente mediante: Funciones de Manejo de Errores: Se implementan funciones especializadas para manejar errores, como imprimir mensajes y realizar limpieza; Conjunto de Macros para Errores: Se definen macros para gestionar errores, incluyendo mensajes y acciones específicas; Variables Globales de Error: Se utiliza una variable global para almacenar información sobre el último error; Uso de setjmp y longjmp: Se pueden utilizar para simular el comportamiento de excepciones, aunque su uso no es recomendado debido a complejidades y posibles problemas de seguridad y códigos de Retorno: Las funciones devuelven valores para indicar éxito o fallo.
+
+
+
 
 
 Conclusión:
