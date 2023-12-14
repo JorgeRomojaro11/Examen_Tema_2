@@ -3,7 +3,6 @@
 #include <stdexcept>
 #include <vector>
 
-// Excepción personalizada para errores en el formato de la fecha
 class FechaInvalidaException : public std::exception {
 public:
     const char* what() const noexcept override {
