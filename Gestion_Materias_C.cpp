@@ -13,4 +13,13 @@ struct Estudiante {
     struct Materia* materias;
     int numMaterias;
 };
+void mostrarEstudiante(const struct Estudiante* estudiante) {
+    printf("Nombre: %s\n", estudiante->nombre);
+    printf("Edad: %d\n", estudiante->edad);
+    printf("Promedio: %f\n", estudiante->promedio);
 
+    printf("Materias Inscritas:\n");
+    for (int i = 0; i < estudiante->numMaterias; ++i) {
+        printf(" - %s, Calificación: %f\n", estudiante->materias[i].nombreMateria, estudiante->materias[i].calificacion);
+    }
+}
