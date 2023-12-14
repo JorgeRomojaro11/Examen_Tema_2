@@ -27,4 +27,15 @@ void mostrarAsistencia(const struct Estudiante* estudiante) {
         printf("Fecha: %s, Materia: %s, Estado: %s\n", estudiante->asistencias[i].fecha, estudiante->asistencias[i].materia, estudiante->asistencias[i].estado);
     }
 }
+int main() {
+    struct Estudiante estudiante1 = {"Diego", 19, 75.0, NULL, 0};
+    registrarAsistencia(&estudiante1, "2023-01-01", "Matemáticas", "asistió");
+    registrarAsistencia(&estudiante1, "2023-01-02", "Historia", "falta");
+    registrarAsistencia(&estudiante1, "2023-01-03", "Inglés", "tardanza");
 
+    mostrarAsistencia(&estudiante1);
+
+    free(estudiante1.asistencias);
+
+    return 0;
+}
