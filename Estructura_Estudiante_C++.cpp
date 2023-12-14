@@ -12,7 +12,7 @@ void mostrarEstudiante(const Estudiante& estudiante) {
     std::cout << "Promedio: " << estudiante.promedio << std::endl;
 }
 int main() {
-    Estudiante estudiante1 = {"Juan", 20, 85.5};
+    Estudiante estudiante1 = {"Manolito", 20, 85.5};
     mostrarEstudiante(estudiante1);
 
     return 0;
