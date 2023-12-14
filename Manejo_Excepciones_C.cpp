@@ -11,4 +11,10 @@ enum Error {
     FECHA_INVALIDA,
     MATERIA_NO_REGISTRADA
 };
-
+struct Estudiante {
+    char nombre[50];
+    int edad;
+    float promedio;
+    struct Asistencia* asistencias;
+    int numAsistencias;
+};
