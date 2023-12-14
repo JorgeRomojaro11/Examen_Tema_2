@@ -51,9 +51,9 @@ private:
 std::vector<Asistencia> GestionAsistencia::asistencias;
 int main() {
     try {
-        GestionAsistencia::registrarAsistencia("2023-01-01", "Matemáticas", "asistió");
+        GestionAsistencia::registrarAsistencia("2023-01-01", "Matematicas", "asistió");
         GestionAsistencia::registrarAsistencia("2023-01-02", "Historia", "falta");
-        GestionAsistencia::registrarAsistencia("2023-01-03", "Inglés", "tardanza");
+        GestionAsistencia::registrarAsistencia("2023-01-03", "Ingles", "tardanza");
 
         GestionAsistencia::mostrarAsistencia();
 
