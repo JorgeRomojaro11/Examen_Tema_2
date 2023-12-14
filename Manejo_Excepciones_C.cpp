@@ -27,3 +27,11 @@ int registrarAsistencia(struct Estudiante* estudiante, const char* fecha, const 
     if (!materiaRegistrada(materia)) {
         return MATERIA_NO_REGISTRADA;
     }
+    estudiante->asistencias = (struct Asistencia*)realloc(estudiante->asistencias, (estudiante->numAsistencias + 1) * sizeof(struct Asistencia));
+    strncpy(estudiante->asistencias[estudiante->numAsistencias].fecha, fecha, sizeof(estudiante->asistencias[estudiante->numAsistencias].fecha));
+    strncpy(estudiante->asistencias[estudiante->numAsistencias].materia, materia, sizeof(estudiante->asistencias[estudiante->numAsistencias].materia));
+    strncpy(estudiante->asistencias[estudiante->numAsistencias].estado, estado, sizeof(estudiante->asistencias[estudiante->numAsistencias].estado));
+    estudiante->numAsistencias++;
+
+    return OK;
+}
