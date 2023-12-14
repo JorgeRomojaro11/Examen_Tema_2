@@ -30,4 +30,14 @@ public:
         if (!materiaRegistrada(materia)) {
             throw MateriaNoRegistradaException();
         }
+        Asistencia nuevaAsistencia = {fecha, materia, estado};
+        asistencias.push_back(nuevaAsistencia);
+    }
+
+    static void mostrarAsistencia() {
+        std::cout << "Registro de Asistencia:\n";
+        for (const Asistencia& asistencia : asistencias) {
+            std::cout << "Fecha: " << asistencia.fecha << ", Materia: " << asistencia.materia << ", Estado: " << asistencia.estado << "\n";
+        }
+    }
 
