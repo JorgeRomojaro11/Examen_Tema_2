@@ -19,3 +19,7 @@ struct Estudiante {
     struct Asistencia* asistencias;
     int numAsistencias;
 };
+int registrarAsistencia(struct Estudiante* estudiante, const char* fecha, const char* materia, const char* estado) {
+    if (strlen(fecha) != 10 || fecha[4] != '-' || fecha[7] != '-') {
+        return FECHA_INVALIDA;
+    }
