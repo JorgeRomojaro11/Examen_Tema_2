@@ -14,5 +14,11 @@ struct Estudiante {
     struct Asistencia* asistencias;
     int numAsistencias;
 };
-
+void registrarAsistencia(struct Estudiante* estudiante, const char* fecha, const char* materia, const char* estado) {
+    estudiante->asistencias = (struct Asistencia*)realloc(estudiante->asistencias, (estudiante->numAsistencias + 1) * sizeof(struct Asistencia));
+    strncpy(estudiante->asistencias[estudiante->numAsistencias].fecha, fecha, sizeof(estudiante->asistencias[estudiante->numAsistencias].fecha));
+    strncpy(estudiante->asistencias[estudiante->numAsistencias].materia, materia, sizeof(estudiante->asistencias[estudiante->numAsistencias].materia));
+    strncpy(estudiante->asistencias[estudiante->numAsistencias].estado, estado, sizeof(estudiante->asistencias[estudiante->numAsistencias].estado));
+    estudiante->numAsistencias++;
+}
 
