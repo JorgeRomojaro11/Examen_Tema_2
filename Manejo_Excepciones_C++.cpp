@@ -49,5 +49,22 @@ private:
 };
 
 std::vector<Asistencia> GestionAsistencia::asistencias;
+int main() {
+    try {
+        GestionAsistencia::registrarAsistencia("2023-01-01", "Matemáticas", "asistió");
+        GestionAsistencia::registrarAsistencia("2023-01-02", "Historia", "falta");
+        GestionAsistencia::registrarAsistencia("2023-01-03", "Inglés", "tardanza"); // Esto generará una excepción
 
+        GestionAsistencia::mostrarAsistencia();
+
+    } catch (const FechaInvalidaException& e) {
+        std::cerr << "Excepción: " << e.what() << std::endl;
+    } catch (const MateriaNoRegistradaException& e) {
+        std::cerr << "Excepción: " << e.what() << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "Excepción general: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
 
