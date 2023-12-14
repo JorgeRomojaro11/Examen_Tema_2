@@ -27,7 +27,7 @@ public:
     }
 };
 int main() {
-    Estudiante estudiante1 = {"Rustero", 33, 50.0};
+    Estudiante estudiante1 = {"Rustero", 34, 50.0};
     GestionAsistencia::registrarAsistencia(estudiante1, "2023-01-01", "Matemáticas", "asistió");
     GestionAsistencia::registrarAsistencia(estudiante1, "2023-01-02", "Historia", "falta");
     GestionAsistencia::registrarAsistencia(estudiante1, "2023-01-03", "Inglés", "tardanza");
