@@ -53,7 +53,7 @@ int main() {
     try {
         GestionAsistencia::registrarAsistencia("2023-01-01", "Matemáticas", "asistió");
         GestionAsistencia::registrarAsistencia("2023-01-02", "Historia", "falta");
-        GestionAsistencia::registrarAsistencia("2023-01-03", "Inglés", "tardanza"); // Esto generará una excepción
+        GestionAsistencia::registrarAsistencia("2023-01-03", "Inglés", "tardanza");
 
         GestionAsistencia::mostrarAsistencia();
 
