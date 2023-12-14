@@ -6,3 +6,11 @@ struct Materia {
     char nombreMateria[50];
     float calificacion;
 };
+struct Estudiante {
+    char nombre[50];
+    int edad;
+    float promedio;
+    struct Materia* materias;
+    int numMaterias;
+};
+
