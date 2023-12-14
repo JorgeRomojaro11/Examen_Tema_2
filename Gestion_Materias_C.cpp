@@ -40,9 +40,9 @@ void eliminarMateria(struct Estudiante* estudiante, const char* nombreMateria) {
     }
 }
 int main() {
-    struct Estudiante estudiante1 = {"Juan", 20, 85.5, NULL, 0};
-    agregarMateria(&estudiante1, "Matemáticas", 90.0);
-    agregarMateria(&estudiante1, "Historia", 75.5);
+    struct Estudiante estudiante1 = {"Marta Diaz", 21, 60.0, NULL, 0};
+    agregarMateria(&estudiante1, "Matemáticas", 70.0);
+    agregarMateria(&estudiante1, "Historia", 50.0);
     mostrarEstudiante(&estudiante1);
 
     eliminarMateria(&estudiante1, "Historia");
