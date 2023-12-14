@@ -29,9 +29,9 @@ void mostrarAsistencia(const struct Estudiante* estudiante) {
 }
 int main() {
     struct Estudiante estudiante1 = {"Diego", 19, 75.0, NULL, 0};
-    registrarAsistencia(&estudiante1, "2023-01-01", "Matemáticas", "asistió");
+    registrarAsistencia(&estudiante1, "2023-01-01", "Matemáticas", "Tardanza");
     registrarAsistencia(&estudiante1, "2023-01-02", "Historia", "falta");
-    registrarAsistencia(&estudiante1, "2023-01-03", "Inglés", "tardanza");
+    registrarAsistencia(&estudiante1, "2023-01-03", "Inglés", "Asistio");
 
     mostrarAsistencia(&estudiante1);
 
