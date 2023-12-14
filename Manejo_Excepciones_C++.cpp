@@ -40,4 +40,14 @@ public:
             std::cout << "Fecha: " << asistencia.fecha << ", Materia: " << asistencia.materia << ", Estado: " << asistencia.estado << "\n";
         }
     }
+private:
+    static bool materiaRegistrada(const std::string& materia) {
+        return (materia == "Matemáticas" || materia == "Historia");
+    }
+
+    static std::vector<Asistencia> asistencias;
+};
+
+std::vector<Asistencia> GestionAsistencia::asistencias;
+
 
