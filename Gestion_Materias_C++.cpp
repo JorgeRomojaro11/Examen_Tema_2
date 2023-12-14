@@ -22,3 +22,7 @@ void mostrarEstudiante(const Estudiante& estudiante) {
         std::cout << " - " << materia.nombreMateria << ", Calificación: " << materia.calificacion << std::endl;
     }
 }
+void agregarMateria(Estudiante& estudiante, const std::string& nombreMateria, float calificacion) {
+    Materia nuevaMateria = {nombreMateria, calificacion};
+    estudiante.materias.push_back(nuevaMateria);
+}
