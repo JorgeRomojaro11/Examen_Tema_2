@@ -15,3 +15,9 @@ public:
         return "Error: Materia no registrada.";
     }
 };
+struct Asistencia {
+    std::string fecha;
+    std::string materia;
+    std::string estado;
+};
+
