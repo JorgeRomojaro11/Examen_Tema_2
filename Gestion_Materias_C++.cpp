@@ -1,3 +1,8 @@
-//
-// Created by Jorge Romojaro on 14/12/2023.
-//
+#include <iostream>
+#include <string>
+#include <vector>
+
+struct Materia {
+    std::string nombreMateria;
+    float calificacion;
+};
