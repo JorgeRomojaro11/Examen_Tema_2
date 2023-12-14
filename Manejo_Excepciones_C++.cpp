@@ -20,4 +20,14 @@ struct Asistencia {
     std::string materia;
     std::string estado;
 };
+class GestionAsistencia {
+public:
+    static void registrarAsistencia(const std::string& fecha, const std::string& materia, const std::string& estado) {
+        if (fecha.size() != 10 || fecha[4] != '-' || fecha[7] != '-') {
+            throw FechaInvalidaException();
+        }
+
+        if (!materiaRegistrada(materia)) {
+            throw MateriaNoRegistradaException();
+        }
 
