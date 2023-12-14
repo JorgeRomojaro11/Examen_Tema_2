@@ -21,4 +21,10 @@ void registrarAsistencia(struct Estudiante* estudiante, const char* fecha, const
     strncpy(estudiante->asistencias[estudiante->numAsistencias].estado, estado, sizeof(estudiante->asistencias[estudiante->numAsistencias].estado));
     estudiante->numAsistencias++;
 }
+void mostrarAsistencia(const struct Estudiante* estudiante) {
+    printf("Asistencia de %s:\n", estudiante->nombre);
+    for (int i = 0; i < estudiante->numAsistencias; ++i) {
+        printf("Fecha: %s, Materia: %s, Estado: %s\n", estudiante->asistencias[i].fecha, estudiante->asistencias[i].materia, estudiante->asistencias[i].estado);
+    }
+}
 
